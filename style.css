@@ -1,3 +1,5 @@
+
+@layer cssreset {
 /* css reset */
 *::before,
 *::after {
@@ -38,7 +40,9 @@ h5,
 h6 {
   text-wrap: balance;
 }
+}
 
+@layer fonts {
 /* fonts */
 
 /* young-serif-regular - latin */
@@ -83,9 +87,9 @@ h6 {
   font-weight: 700;
   src: url("/fonts/outfit-v11-latin-700.woff2") format("woff2"); /* Chrome 36+, Opera 23+, Firefox 39+, Safari 12+, iOS 10+ */
 }
+}
 
-
-@layer colors{
+@layer variables{
  :root {
   /* colors */
  
@@ -97,58 +101,98 @@ h6 {
   --color-stone-light: hsl(30, 54%, 90%);
   --color-brown: hsl(14, 45%, 36%);
   --color-white: hsl(0, 0%, 100%);
+
+
+  /* spacing */
+    --space-8: 0.5rem;
+    --space-12: 0.75rem;
+    --space-16: 1rem;
+    --space-24: 1.5rem;
+    --space-32: 2rem;
+    --space-40: 2.5rem;
+    --space-48: 3rem;
+    --space-128: 8rem;
+
 }
 }
+
+@layer typography {
+   .textpreset1 {
+    font-family: 'Young Serif', serif;
+    font-weight: 400;
+    font-size: 2.5rem;
+    line-height: 100%;
+    letter-spacing: 0px;
+   }
+
+   .textpreset2 {
+    font-family: 'Young Serif', serif;
+    font-weight: 400;
+    font-size: 1.75rem;
+    line-height: 100%;
+    letter-spacing: 0px;
+   }
+
+   .textpreset3 {
+    font-family: Outfit, serif;
+    font-weight: 600;
+    font-size: 1.5rem;
+    line-height: 100%;
+    letter-spacing: 0px;
+
+   }
+
+   .textpreset4 {
+    font-family: Outfit, serif;
+    font-weight: 400;
+    font-size: 1rem;
+    line-height: 150%;
+    letter-spacing: 0px;
+   }
+
+   .textpreset5 {
+    font-family: Outfit, serif;
+    font-weight: 700;
+    line-height: 150%;
+    letter-spacing: 0px;
+   }
+
+
+}
+
 
 body {
-  background-color: var(--stone-100);
-  font-family: Outfit, serif;
-  display: grid;
-  grid-template-columns: 1fr min(80vh, 1000px) 1fr;
-}
 
-h1,
-h2,
-h3 {
-  font-family: "Young Serif", serif;
-}
-p {
-  font-size: 1.5rem;
-  color: var(--color-brown);
-  line-height: 1.5;
-}
-
-h1 {
-  font-size: 3.5rem;
-}
-
-h2 {
-  color: var(--color-brown);
+  @media (width>700px) {
+  background-color: var(--color-stone-light);
+  }
 }
 
 .wrapper {
   background-color: var(--color-white);
+  margin: auto auto;
 
-  margin-top: 160px;
-  padding: 60px;
-  border-radius: 40px;
+  @media (width>700px) {
+    width: 616px;
+  }
+
+  @media (width>1080) {
+    width: 736px;
+  }
 }
 
-img {
-  border-radius: 40px;
-  height: 450px;
-}
 
-.preparation {
-  background-color: var(--color-rose);
-  padding: 40px;
-  border-radius: 40px;
-  margin-top: 60px;
-  margin-bottom: 60px;
-}
+.attribution {
 
-.bigred {
-  font-size: 32px;
-  color: var(--color-dark-rose);
-  font-weight: 700;
+  margin-top: var(--space-128);
+  text-align: center;
+
+  a {
+    text-decoration: none;
+
+  }
+
+  a:hover {
+    border: 1px var(--color-dark-brown) solid;
+  }
 }
