@@ -185,9 +185,11 @@ body {
 }
 
 .textwrapper {
-      padding-left: var(--space-32);
-      padding-right: var(--space-32);
-
+   
+  @media (width<calc(700 / 16 * 1rem)) {
+    padding-left: var(--space-32);
+    padding-right: var(--space-32);
+  }
 }
 @layer hero {
 
@@ -222,6 +224,53 @@ body {
   }
 }
 
+@layer preparation {
+
+  .preparation {
+    background-color: var(--color-rose-light);
+    border-radius: 12px;
+    padding: var(--space-24);
+    margin-block-end: var(--space-32);
+    
+    
+
+  .title {
+    color: var(--color-rose-dark);
+    margin-block-end: var(--space-16);
+
+    @media (width<calc(700 / 16 * 1rem)){
+      font-size: 1.25em;
+    }
+
+  }
+
+  .description {
+    color: var(--color-stone-medium);
+    
+ 
+
+  }
+}
+}
+
+@layer Ingredients {
+
+  .ingredients {
+    margin-block-end: var(--space-32);
+
+
+    .title {
+      color: var(--color-brown);
+      margin-block-end: var(--space-24);
+
+    }
+
+    .description {
+      color: var(--color-stone-medium);
+
+    }
+  }
+}
 .attribution {
 
   margin-top: var(--space-128);
