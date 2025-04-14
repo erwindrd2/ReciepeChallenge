@@ -32,7 +32,7 @@
             combines beaten eggs cooked to perfection, optionally filled with
             your choice of cheese, vegetables, or meats.
           </p>
-        </section>
+        </section class="preparations">
         <section class="Preparation textwrapper"> 
        <div class="preparation">
           <p class="title textpreset3">Preparation time</p>
@@ -44,7 +44,7 @@
           </div>
         </section>
         <section class="ingredients textwrapper">
-        <div class="ingredients">
+        
           <h2 class="title textpreset2">Ingredients</h2>
           
           <ul class="description">
@@ -57,11 +57,12 @@
             </li>
           </ul>
     
-        </div>
+        
         </section>
+        <section class="instructions textwrapper">
         <div class="instructions">
-          <h2 class="instruction__title title textpreset2">Instructions</h2>
-          <ol class="textpreset4">
+          <h2 class="title textpreset2">Instructions</h2>
+          <ol class="textpreset4 description">
             <li>
               <strong>Beat the eggs:</strong> In a bowl, beat the eggs with a
               pinch of salt and pepper until they are well mixed. You can add a
@@ -92,33 +93,35 @@
             </li>
           </ol>
         </div>
+        </section>
+        <section class="nutrition textwrapper">
         <div class="nutrition">
           <h2 class="nutrition__title title textpreset2">Nutrition</h2>
-          <p class="textpreset4">
+          <p class="textpreset4 description">
             The table below shows nutritional values per serving without the
             additional fillings.
           </p>
-          <table class="textpreset4">
-            <tr>
-              <td>Calories</td>
-              <td class="nutrition__amount">277kcal</td>
-            </tr>
-            <tr>
-              <td>Carbs</td>
-              <td class="nutrition__amount">0g</td>
-            </tr>
-            <tr>
-              <td>Protein</td>
-              <td class="nutrition__amount">20g</td>
-            </tr>
-            <tr>
-              <td>Fat</td>
-              <td class="nutrition__amount">22g</td>
-            </tr>
-          </table>
+          <div class="nutrition-table">
+          
+            <p class="measure">Calories</p>
+            <p class="value">277kcal</p>
+           <div class="gridborder"></div>
+           
+            <p class="measure">Carbs</p>
+            <p class="value">0g</p>
+            <div class="gridborder"></div>
+            <p class="measure">Protein</p>
+            <p class="value">20g</p>
+          <div class="gridborder"></div>
+            <p class="measure">Fat</p>
+            <p class="value">22g</p>
+
+          </div>
+        
         </div>
-        </div>
+        </section>
       </div>
+
     </main>
 
     <footer>
@@ -126,7 +129,7 @@
         Challenge by
         <a href="https://www.frontendmentor.io?ref=challenge" target="_blank"
           >Frontend Mentor</a
-        >. Coded by <a href="#">Your Name Here</a>.
+        >. Coded by <a href="#">Erwin</a>.
       </div>
     </footer>
   </body>
